@@ -635,6 +635,8 @@ textarea.input {
     display: block;
     -webkit-transition: 0.2s opacity;
     transition: 0.2s opacity;
+   
+    
 }
 
 .post .post-img:hover,
@@ -644,6 +646,8 @@ textarea.input {
 
 .post .post-img>img {
     width: 100%;
+  
+    
 }
 
 .post .post-meta {

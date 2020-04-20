@@ -3,7 +3,7 @@
 require_once('connection.php');
 
 //Truy Vấn câu lệnh
-$query = "SELECT * FROM `posts` ORDER BY created_at desc limit 6";
+$query = "SELECT p.*,c.title AS 'category' FROM `posts` p LEFT JOIN categories c ON p.category_id = c.id WHERE p.`status` = 1 ORDER BY created_at  desc limit 20,6";
 
 //Thực thi câu lệnh
 $result  = $conn->query($query);
@@ -45,7 +45,7 @@ while ($row = $result_two_posts->fetch_assoc()) {
 
 //Lấy ra 6 bài viết-----------------------------------------------------------------------
 //Truy Vấn câu lệnh
-$query_post = "SELECT * FROM `posts` ORDER BY created_at  desc limit 7,2";
+$query_post = "SELECT p.*,c.title AS 'category' FROM `posts` p LEFT JOIN categories c ON p.category_id = c.id WHERE p.`status` = 1 ORDER BY created_at  desc limit 7,6";
 
 //Thực thi câu lệnh
 $result_post  = $conn->query($query_post);
@@ -59,7 +59,7 @@ while ($row = $result_post->fetch_assoc()) {
 
 //Lấy ra 1 bài viết lớn-----------------------------------------------------------------------
 //Truy Vấn câu lệnh
-$query_x = "SELECT * FROM `posts` ORDER BY created_at  desc limit 6,1";
+$query_x = "SELECT p.*,c.title AS 'category' FROM `posts` p LEFT JOIN categories c ON p.category_id = c.id WHERE p.`status` = 1 ORDER BY created_at  desc limit 19,1";
 
 //Thực thi câu lệnh
 $result_x  = $conn->query($query_x);
@@ -139,7 +139,7 @@ while ($row = $result_post_MostRead->fetch_assoc()) {
 					<!-- post -->
 					<div class="col-md-6">
 						<div class="post post-thumb">
-							<a class="post-img" href="blog-post.html"><img src="<?php echo $posts_two_post['thumbnail']; ?>" alt=""></a>
+							<a class="post-img" href="blog-post.html"><img src="./img/<?php echo $posts_two_post['thumbnail']; ?>" alt=""></a>
 							<div class="post-body">
 								<div class="post-meta">
 									<a class="post-category cat-2" href="category.html"><?php echo $posts_two_post['category']; ?></a>
@@ -170,7 +170,7 @@ while ($row = $result_post_MostRead->fetch_assoc()) {
 					<!-- post -->
 					<div class="col-md-4">
 						<div class="post">
-							<a class="post-img" href="blog-post.html"><img src="<?php echo $post['thumbnail']; ?>" alt=""></a>
+							<a class="post-img" href="blog-post.html"><img src="./img/<?php echo $post['thumbnail']; ?>" alt=""></a>
 							<div class="post-body">
 								<div class="post-meta">
 									<a class="post-category cat-1" href="category.html">Web Design</a>
@@ -192,14 +192,15 @@ while ($row = $result_post_MostRead->fetch_assoc()) {
 					<div class="row">
 						<!-- postaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa -->
 						<div class="clearfix visible-md visible-lg"></div>
+
 						<?php
 						foreach ($posts_x as $post_x) {
-							//print_r($post);
+							//print_r($post_x);
 						?>
 							<!-- post -->
 							<div class="col-md-12">
 								<div class="post post-thumb">
-									<a class="post-img" href="blog-post.html"><img src="<?php echo $post_x['thumbnail']; ?>" alt=""></a>
+									<a class="post-img" href="blog-post.html"><img src="./img/<?php echo $post_x['thumbnail']; ?>" alt=""></a>
 									<div class="post-body">
 										<div class="post-meta">
 											<a class="post-category cat-3" href="category.html">Jquery</a>
@@ -209,45 +210,19 @@ while ($row = $result_post_MostRead->fetch_assoc()) {
 									</div>
 								</div>
 							</div>
+					<!-- <!can chu y-- ----------------------------------------------- --> 
 							<!-- /post -->
 						<?php } ?>
+
 						<div class="clearfix visible-md visible-lg"></div>
 						<?php
 						foreach ($posts_post as $post_post) {
-							//print_r($post);
+							//print_r($post_post);
 						?>
 							<!-- post -->
 							<div class="col-md-6">
 								<div class="post">
-									<a class="post-img" href="blog-post.html"><img src="<?php echo $post_post['thumbnail']; ?>" alt=""></a>
-									<div class="post-body">
-										<div class="post-meta">
-											<a class="post-category cat-2" href="category.html">JavaScript</a>
-											<span class="post-date"><?php echo $post_post['created_at']; ?></span>
-										</div>
-										<h3 class="post-title"><a href="blog-post.php?id=<?php echo $post_post['id']; ?>"><?php echo $post_post['title']; ?></a></h3>
-									</div>
-								</div>
-							</div>
-							<!-- /post -->
-							<!-- post -->
-							<div class="col-md-6">
-								<div class="post">
-									<a class="post-img" href="blog-post.html"><img src="<?php echo $post_post['thumbnail']; ?>" alt=""></a>
-									<div class="post-body">
-										<div class="post-meta">
-											<a class="post-category cat-2" href="category.html">JavaScript</a>
-											<span class="post-date"><?php echo $post_post['created_at']; ?></span>
-										</div>
-										<h3 class="post-title"><a href="blog-post.php?id=<?php echo $post_post['id']; ?>"><?php echo $post_post['title']; ?></a></h3>
-									</div>
-								</div>
-							</div>
-							<!-- /post -->
-							<!-- post -->
-							<div class="col-md-6">
-								<div class="post">
-									<a class="post-img" href="blog-post.html"><img src="<?php echo $post_post['thumbnail']; ?>" alt=""></a>
+									<a class="post-img" href="blog-post.html"><img src="./img/<?php echo $post_post['thumbnail']; ?>" alt=""></a>
 									<div class="post-body">
 										<div class="post-meta">
 											<a class="post-category cat-2" href="category.html">JavaScript</a>
@@ -259,11 +234,6 @@ while ($row = $result_post_MostRead->fetch_assoc()) {
 							</div>
 							<!-- /post -->
 						<?php } ?>
-
-
-
-
-
 					</div>
 				</div>
 
@@ -278,32 +248,13 @@ while ($row = $result_post_MostRead->fetch_assoc()) {
 							//print_r($post);
 						?>
 						<div class="post post-widget">
-							<a class="post-img" href="blog-post.html"><img src="<?php echo $post_MostRead['thumbnail']; ?>" alt=""></a>
+							<a class="post-img" href="blog-post.html"><img src="./img/<?php echo $post_MostRead['thumbnail']; ?>" alt=""></a>
 							<div class="post-body">
 								<h3 class="post-title"><a href="blog-post.php?id=<?php echo $post_MostRead['id']; ?>"><?php echo $post_MostRead['title']; ?></a></h3>
 							</div>
 						</div>
 						<?php } ?>
-						<!-- <div class="post post-widget">
-							<a class="post-img" href="blog-post.html"><img src="./img/widget-2.jpg" alt=""></a>
-							<div class="post-body">
-								<h3 class="post-title"><a href="blog-post.html">Pagedraw UI Builder Turns Your Website Design Mockup Into Code Automatically</a></h3>
-							</div>
-						</div>
 
-						<div class="post post-widget">
-							<a class="post-img" href="blog-post.html"><img src="./img/widget-3.jpg" alt=""></a>
-							<div class="post-body">
-								<h3 class="post-title"><a href="blog-post.html">Why Node.js Is The Coolest Kid On The Backend Development Block!</a></h3>
-							</div>
-						</div>
-
-						<div class="post post-widget">
-							<a class="post-img" href="blog-post.html"><img src="./img/widget-4.jpg" alt=""></a>
-							<div class="post-body">
-								<h3 class="post-title"><a href="blog-post.html">Tell-A-Tool: Guide To Web Design And Development Tools</a></h3>
-							</div>
-						</div> -->
 					</div>
 					<!-- /post widget -->
 
