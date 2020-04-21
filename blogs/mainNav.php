@@ -8,7 +8,6 @@
                 <a href="index.php" class="logo"><img src=" ./img/images_skinfood_logo.png" alt=""></a>
             </div>
             <!-- /logo -->
-
             <!-- nav -->
             <ul class="nav-menu nav navbar-nav">
                 <?php
@@ -45,52 +44,25 @@
         <!-- nav -->
         <div class="section-row">
             <ul class="nav-aside-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="#">Join Us</a></li>
-                <li><a href="#">Advertisement</a></li>
-                <li><a href="contact.html">Contacts</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="about.html">Need Help?</a></li>
             </ul>
         </div>
         <!-- /nav -->
 
-        <!-- widget posts -->
-        <div class="section-row">
-            <h3>Recent Posts</h3>
-            <div class="post post-widget">
-                <a class="post-img" href="blog-post.html"><img src="./img/widget-2.jpg" alt=""></a>
-                <div class="post-body">
-                    <h3 class="post-title"><a href="blog-post.html">Pagedraw UI Builder Turns Your Website Design Mockup
-                            Into Code Automatically</a></h3>
-                </div>
-            </div>
-
-            <div class="post post-widget">
-                <a class="post-img" href="blog-post.html"><img src="./img/widget-3.jpg" alt=""></a>
-                <div class="post-body">
-                    <h3 class="post-title"><a href="blog-post.html">Why Node.js Is The Coolest Kid On The Backend
-                            Development Block!</a></h3>
-                </div>
-            </div>
-
-            <div class="post post-widget">
-                <a class="post-img" href="blog-post.html"><img src="./img/widget-4.jpg" alt=""></a>
-                <div class="post-body">
-                    <h3 class="post-title"><a href="blog-post.html">Tell-A-Tool: Guide To Web Design And Development
-                            Tools</a></h3>
-                </div>
-            </div>
-        </div>
-        <!-- /widget posts -->
+        <!-- --Most_Read----------------------------------------- -->
+        <?php
+                    include($level . Post_part . "Most_Read.php");
+                   ?>
 
         <!-- social links -->
         <div class="section-row">
             <h3>Follow us</h3>
             <ul class="nav-aside-social">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                <li><a href=" https://www.facebook.com/theskinfood.us"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/skinfood_us"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/skinfood_us/"><i class="fa fa-instagram"></i></a>
+                </li>
             </ul>
         </div>
         <!-- /social links -->
