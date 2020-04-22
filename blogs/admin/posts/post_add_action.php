@@ -19,7 +19,10 @@
     $category_id = 1;
     $author_id = 1;
     $status = 1;
-    $created_at = "2020-04-21 09:30:51";
+
+    date_default_timezone_set('Asia/Ho_Chi_Minh');
+    $created_at =  date('Y-m-d H:i:s');
+    
     $query = "INSERT INTO posts (title,description,contents,thumbnail,category_id,author_id,status,created_at) 
     VALUES ('".$title."', '".$description."','".$contents."','".$thumbnail."','".$category_id."','".$author_id."','".$status."','".$created_at."');";
 

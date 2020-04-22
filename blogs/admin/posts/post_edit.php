@@ -1,16 +1,30 @@
 <?php
 
+
 require_once('../../connection.php');
 //Load posts -----------------------------------------------------------------------
 
 //Lấy ra dữ liệu cần sửa
 //Truy Vấn câu lệnh
 $id = $_GET['id'];
-$query_posts = "SELECT * FROM posts WHERE id =".$id  ;
+$query_posts = "SELECT * FROM posts WHERE id =".$id ;
 
 //Thực thi câu lệnh
 $posts = $conn->query($query_posts)->fetch_assoc();
 
+//Load category -----------------------------------------------------------------------
+//Truy Vấn câu lệnh
+$query_category  = "SELECT * FROM categories";
+
+//Thực thi câu lệnh
+$result_category = $conn->query($query_category);
+//Tạo một mảng chứa dữ liệu
+$categories = array();
+
+while ($row = $result_category->fetch_assoc()) {
+	$categories[] = $row;
+}
+//End Load category
 
 
 //End Load posts
@@ -52,6 +66,28 @@ $posts = $conn->query($query_posts)->fetch_assoc();
                 <label for="">Contents</label>
                 <input type="text" class="form-control" id="" placeholder="" name="contents"
                     value="<?=$posts['contents']?>">
+            </div>
+            <div class="form-group">
+                <label for="">Category</label>
+                <select name="category_id" class="form-control">
+                    <?php foreach ($categories as $cate) {?>
+                    <option <?= ($posts['category_id'] == $cate['id']) ? 'selected': ''?> value="<?= $cate['id'] ?>">
+                        <?= $cate['title'] ?>
+                    </option>
+                    <?php } ?>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="">Thumbnail</label>
+                <img src="../../img/<?=$posts['thumbnail']?>" width="200px">
+                <input type="file" class="form-control" id="" placeholder="" name="thumbnail"
+                    value="<?=$posts['thumbnail']?>">
+            </div>
+            <div class="form-group">
+                <label for="">Hiện thị bài viết</label>
+                <input <?= ($posts['status'] == 1) ? 'checked': ''?> type="checkbox" id="" placeholder="" value="1"
+                    name="status">
+                <i>(Check để hiện thị bài viết)</i>
             </div>
 
             <button type="submit" class="btn btn-primary">Update</button>
