@@ -26,11 +26,32 @@
             <!-- /nav -->
 
             <!-- search & aside toggle -->
+            <style>
+            #dropdown {
+                display: block;
+                background-color: #ffff;
+                text-decoration: none;
+            }
+            </style>
             <div class="nav-btns">
                 <button class="aside-btn"><i class="fa fa-bars"></i></button>
                 <button class="search-btn"><i class="fa fa-search"></i></button>
-                <div class="search-form">
-                    <input class="search-input" type="text" name="search" placeholder="Enter Your Search ...">
+                <div class="search-form" id="myDropdown">
+                    <input class="search-input" type="text" name="search" placeholder="Enter Your Search ..."
+                        id="myInput" onkeyup="filterFunction()">
+                    <!-- <a href="#about">About</a><br> -->
+                    <?php
+						$i = 1;
+						foreach ($categories as $categorie) {
+						?>
+                    <a id="dropdown" class=" cat-<?= $i ?>"
+                        href="category.php?id=<?php echo $categorie['id']; ?>&cate=<?php echo $categorie['title'] ?> "><?php echo $categorie['title']; ?></a>
+
+                    <?php
+							$i++;
+							if ($i == 6)
+								$i = 1;
+						} ?>
                     <button class="search-close"><i class="fa fa-times"></i></button>
                 </div>
             </div>

@@ -276,10 +276,9 @@
         <!-- /container -->
     </div>
     <!-- /section -->
-
-    <?php
+</body>
+<?php
             include($level . Footer_part . "footer.php");
         ?>
-</body>
 
 </html>
