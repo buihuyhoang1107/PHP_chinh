@@ -49,8 +49,9 @@
                 <div class="footer-widget">
                     <h4>Be the first to know about new products, offers and promos. Plus,
                         get 20% off!</h4>
-                    <div class="footer-newsletter" method="POST" role="form" enctype="multipart/form-data">
-                        <form action="customer_add_action.php">
+                    <div class="footer-newsletter">
+                        <form action="admin/customer/customer_add_action.php" method="POST" role="form"
+                            enctype="multipart/form-data">
                             <input class="input" type="email" name="newsletter" placeholder="Enter your email">
                             <button class="newsletter-btn"><i class="fa fa-paper-plane"></i></button>
                         </form>

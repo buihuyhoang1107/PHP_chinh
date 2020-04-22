@@ -19,7 +19,7 @@ if(!isset($_SESSION['isLogin']) && $_SESSION['isLogin'] != true){
     if($status == true)
     {
         setcookie('msg', 'Thêm mới thành công', time() + 5);
-        header('Location: category_list.php');
+        header('Location: ../category_list.php');
     }
     else
     {
