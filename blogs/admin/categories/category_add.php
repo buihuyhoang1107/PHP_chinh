@@ -18,7 +18,7 @@
 <body>
     <div class="container">
         <h3 align="center">Zent - Education And Technology Group</h3>
-        <h3 align="center">Add New Post</h3>
+        <h3 align="center">Add New Category</h3>
         <hr>
         <?php
         if(isset($_COOKIE['msg'])) { 
@@ -28,29 +28,15 @@
         </div>
         <?php } ?>
 
-        <form action="post_add_action.php" method="POST" role="form" enctype="multipart/form-data">
+        <form action="category_add_action.php" method="POST" role="form" enctype="multipart/form-data">
             <div class="form-group">
-                <label for="">Title</label>
+                <label for="">Name</label>
                 <input type="text" class="form-control" id="" placeholder="" name="title">
             </div>
             <div class="form-group">
                 <label for="">Description</label>
                 <input type="text" class="form-control" id="" placeholder="" name="description">
             </div>
-            <div class="form-group">
-                <label for="">Contents</label>
-                <input style="height : 200px" type="text" class="form-control" id="" placeholder="" name="contents">
-            </div>
-            <div class="form-group">
-                <label for="">Thumbnail</label>
-                <input type="file" class="form-control" id="" placeholder="" name="thumbnail">
-            </div>
-            <div class="form-group">
-                <label for="">Hiện thị bài viết</label>
-                <input type="checkbox" id="" placeholder="" value="1" name="status">
-                <i>(Check để hiện thị bài viết)</i>
-            </div>
-
             <button type="submit" class="btn btn-primary">Create</button>
         </form>
     </div>

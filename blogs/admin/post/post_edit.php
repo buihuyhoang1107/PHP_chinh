@@ -1,19 +1,19 @@
 <?php
 
 require_once('../../connection.php');
-//Load authors  -----------------------------------------------------------------------
+//Load posts -----------------------------------------------------------------------
 
 //Lấy ra dữ liệu cần sửa
 //Truy Vấn câu lệnh
 $id = $_GET['id'];
-$query_authors  = "SELECT * FROM authors WHERE id =".$id  ;
+$query_posts = "SELECT * FROM posts WHERE id =".$id  ;
 
 //Thực thi câu lệnh
-$authors  = $conn->query($query_authors )->fetch_assoc();
+$posts = $conn->query($query_posts)->fetch_assoc();
 
 
 
-//End Load authors 
+//End Load posts
 ?>
 <!DOCTYPE html>
 <html>
@@ -35,19 +35,25 @@ $authors  = $conn->query($query_authors )->fetch_assoc();
 <body>
     <div class="container">
         <h3 align="center">Zent - Education And Technology Group</h3>
-        <h3 align="center">Update Authors Infomation</h3>
+        <h3 align="center">Update Posts Infomation</h3>
         <hr>
-        <form action="authors_edit_action.php" method="POST" role="form" enctype="multipart/form-data">
-            <input type="hidden" name="id" value="<?=$authors['id']?>">
+        <form action="post_edit_action.php" method="POST" role="form" enctype="multipart/form-data">
+            <input type="hidden" name="id" value="<?=$posts['id']?>">
             <div class="form-group">
-                <label for="">Name</label>
-                <input type="text" class="form-control" id="" placeholder="" name="name" value="<?=$authors['name']?>">
+                <label for="">Title</label>
+                <input type="text" class="form-control" id="" placeholder="" name="title" value="<?=$posts['title']?>">
             </div>
             <div class="form-group">
-                <label for="">Email</label>
-                <input type="text" class="form-control" id="" placeholder="" name="email"
-                    value="<?=$authors['email']?>">
+                <label for="">Description</label>
+                <input type="text" class="form-control" id="" placeholder="" name="description"
+                    value="<?=$posts['description']?>">
             </div>
+            <div class="form-group">
+                <label for="">Contents</label>
+                <input type="text" class="form-control" id="" placeholder="" name="contents"
+                    value="<?=$posts['contents']?>">
+            </div>
+
             <button type="submit" class="btn btn-primary">Update</button>
         </form>
     </div>

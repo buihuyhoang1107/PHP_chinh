@@ -38,7 +38,7 @@
                             <ul class="footer-links">
                                 <li>Start with our frequently asked questions or contact us at
                                     help@theskinfood.com</li>
-                                <li><a href="#">LEARN MORE</a></li>
+                                <li><a href="needHelp.php">LEARN MORE</a></li>
                             </ul>
                         </div>
                     </div>

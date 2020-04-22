@@ -13,6 +13,7 @@ $authors = $conn->query($query_authors)->fetch_assoc();
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,14 +27,17 @@ $authors = $conn->query($query_authors)->fetch_assoc();
     <!-- Latest compiled and minified JavaScript -->
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 </head>
-<body>
-   <div class="container">
-   <h3 style="text-align: center" >Zent - Education And Technology Group</h3>
-   <h3 style="text-align: center"  >Authors Detail</h3>
-   <hr>
-   <h2>Title: <?=$authors['title']?></h2>
-   <h2>Name: <?=$authors['name']?></h2>
 
-   </div>
+<body>
+    <div class="container">
+        <h3 style="text-align: center">Zent - Education And Technology Group</h3>
+        <h3 style="text-align: center">Authors Detail</h3>
+        <hr>
+        <h2>Name: <?=$authors['name']?></h2>
+        <h2>Email: <?=$authors['email']?></h2>
+
+
+    </div>
 </body>
+
 </html>

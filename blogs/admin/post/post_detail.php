@@ -13,6 +13,7 @@ $posts = $conn->query($query_posts)->fetch_assoc();
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,21 +27,18 @@ $posts = $conn->query($query_posts)->fetch_assoc();
     <!-- Latest compiled and minified JavaScript -->
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 </head>
+
 <body>
-   <div class="container">
-   <h3 style="text-align: center" >Zent - Education And Technology Group</h3>
-   <h3 style="text-align: center"  >Posts Detail</h3>
-   <hr>
-   <h2>Title: <?=$posts['title']?></h2>
-   <p><b>Description: <?=$posts['description']?></b></p>
-   <p><b>Thumbnail: <img src="<?=$posts['thumbnail']?>" width="200px"  ></b></p>
-   <p><b>Contents: <?=$posts['contents']?></b></p>
-   <p><b></b></p>
-   <h2>Created_at: <?=$posts['created_at']?></h2>
-   <h3><?=$posts['contents']?></h3>
-
-
-
-   </div>
+    <div class="container">
+        <h3 style="text-align: center">Zent - Education And Technology Group</h3>
+        <h3 style="text-align: center">Posts Detail</h3>
+        <hr>
+        <h2>Title: <?=$posts['title']?></h2>
+        <p><b>Description: </b><?=$posts['description']?></p>
+        <p><b>Thumbnail: <img src="../../img/<?=$posts['thumbnail']?>" width="200px"></b></p>
+        <p><b>Contents: </b><?=$posts['contents']?></p>
+        <p><b>Created_at:</b> <?=$posts['created_at']?> </p>
+    </div>
 </body>
+
 </html>

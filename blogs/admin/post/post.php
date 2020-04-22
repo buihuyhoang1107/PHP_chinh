@@ -17,6 +17,7 @@ while ($row = $result_posts->fetch_assoc()) {
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,57 +31,59 @@ while ($row = $result_posts->fetch_assoc()) {
     <!-- Latest compiled and minified JavaScript -->
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 </head>
+
 <body>
     <div class="container">
-    <h3 align="center">Zent - Education And Technology Group</h3>
-    <h3 align="center">Posts List</h3>
-    <a href="post_add.php" type="button" class="btn btn-primary">Thêm mới</a>
+        <h3 align="center">Zent - Education And Technology Group</h3>
+        <h3 align="center">Posts List</h3>
+        <a href="post_add.php" type="button" class="btn btn-primary">Thêm mới</a>
 
-    <?php
+        <?php
         if(isset($_COOKIE['msg'])) { 
         ?>
         <div class="alert alert-success">
-          <strong>Thành công!</strong> <?=$_COOKIE['msg']?>
+            <strong>Thành công!</strong> <?=$_COOKIE['msg']?>
         </div>
-   <?php } ?>
-<!--    
+        <?php } ?>
+        <!--    
     <div class="alert alert-success">
       <strong>Thành công! </strong> Thông báo 
     </div> -->
 
-    <hr>
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">ID</th>
-          <th scope="col">Title</th>
-          <th scope="col">Description</th>
-          <th scope="col">Contents</th>
-          <th scope="col">Thumbnail</th>
-          <th scope="col">#</th>
-        </tr>
-      </thead>
-      <tbody>
-      <?php
+        <hr>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Contents</th>
+                    <th scope="col">Thumbnail</th>
+                    <th scope="col">#</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
         foreach ($posts as $post ) {
             # code...
 
        ?>
-        <tr>
-          <th scope="row"><?=$post['id']?></th>
-          <td><?=$post['title']?></td>
-          <td><?=$post['description']?></td>
-          <td><?=$post['contents']?></td>
-          <td><img src="<?=$post['thumbnail']?>" width="200px"  ></td>
-          <td>
-            <a href="post_detail.php?id=<?=$post['id']?>" type="button" class="btn btn-default">Xem</a>
-            <a href="post_edit.php?id=<?=$post['id']?>" type="button" class="btn btn-success">Sửa</a>
-            <a href="post_delete.php?id=<?=$post['id']?>" type="button" class="btn btn-warning">Xóa</a>
-          </td>
-        </tr>
-    <?php } ?>
-      </tbody>
-    </table>
+                <tr>
+                    <th scope="row"><?=$post['id']?></th>
+                    <td><?=$post['title']?></td>
+                    <td><?=$post['description']?></td>
+                    <td><?=$post['contents']?></td>
+                    <td><img src="../../img/<?=$post['thumbnail']?>" width="200px"></td>
+                    <td>
+                        <a href="post_detail.php?id=<?=$post['id']?>" type="button" class="btn btn-default">Xem</a>
+                        <a href="post_edit.php?id=<?=$post['id']?>" type="button" class="btn btn-success">Sửa</a>
+                        <a href="post_delete.php?id=<?=$post['id']?>" type="button" class="btn btn-warning">Xóa</a>
+                    </td>
+                </tr>
+                <?php } ?>
+            </tbody>
+        </table>
     </div>
 </body>
+
 </html>

@@ -17,6 +17,7 @@ while ($row = $result_authors->fetch_assoc()) {
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,52 +31,57 @@ while ($row = $result_authors->fetch_assoc()) {
     <!-- Latest compiled and minified JavaScript -->
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 </head>
+
 <body>
     <div class="container">
-    <h3 align="center">Zent - Education And Technology Group</h3>
-    <h3 align="center">Authors List</h3>
-    <a href="authors_add.php" type="button" class="btn btn-primary">Thêm mới</a>
+        <h3 align="center">Zent - Education And Technology Group</h3>
+        <h3 align="center">Authors List</h3>
+        <a href="authors_add.php" type="button" class="btn btn-primary">Thêm mới</a>
 
-    <?php
+        <?php
         if(isset($_COOKIE['msg'])) { 
         ?>
         <div class="alert alert-success">
-          <strong>Thành công!</strong> <?=$_COOKIE['msg']?>
+            <strong>Thành công!</strong> <?=$_COOKIE['msg']?>
         </div>
-   <?php } ?>
-<!--    
+        <?php } ?>
+        <!--    
     <div class="alert alert-success">
       <strong>Thành công! </strong> Thông báo 
     </div> -->
 
-    <hr>
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">ID</th>
-          <th scope="col">Name</th>
-          <th scope="col">#</th>
-        </tr>
-      </thead>
-      <tbody>
-      <?php
+        <hr>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">#</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
         foreach ($authors as $cauthor ) {
             # code...
 
        ?>
-        <tr>
-          <th scope="row"><?=$cauthor['id']?></th>
-          <td><?=$cauthor['title']?></td>
-          <td><?=$cauthor['name']?></td>
-          <td>
-          <a href="authors_detail.php?id=<?=$cauthor['id']?>" type="button" class="btn btn-default">Xem</a>
-            <a href="authors_edit.php?id=<?=$cauthor['id']?>" type="button" class="btn btn-success">Sửa</a>
-            <a href="authors_delete.php?id=<?=$cauthor['id']?>" type="button" class="btn btn-warning">Xóa</a>
-          </td>
-        </tr>
-    <?php } ?>
-      </tbody>
-    </table>
+                <tr>
+                    <th scope="row"><?=$cauthor['id']?></th>
+                    <td><?=$cauthor['name']?></td>
+                    <td><?=$cauthor['email']?></td>
+                    <td>
+                        <a href="authors_detail.php?id=<?=$cauthor['id']?>" type="button"
+                            class="btn btn-default">Xem</a>
+                        <a href="authors_edit.php?id=<?=$cauthor['id']?>" type="button" class="btn btn-success">Sửa</a>
+                        <a href="authors_delete.php?id=<?=$cauthor['id']?>" type="button"
+                            class="btn btn-warning">Xóa</a>
+                    </td>
+                </tr>
+                <?php } ?>
+            </tbody>
+        </table>
     </div>
 </body>
+
 </html>

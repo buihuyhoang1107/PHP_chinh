@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,30 +14,32 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 </head>
+
 <body>
     <div class="container">
-    <h3 align="center">Zent - Education And Technology Group</h3>
-    <h3 align="center">Add New Category</h3>
-    <hr>
-    <?php
+        <h3 align="center">Zent - Education And Technology Group</h3>
+        <h3 align="center">Add New Authors</h3>
+        <hr>
+        <?php
         if(isset($_COOKIE['msg'])) { 
         ?>
         <div class="alert alert-warning">
-          <strong>Thất bại!</strong> Thêm mới không thành công !!!
+            <strong>Thất bại!</strong> Thêm mới không thành công !!!
         </div>
-   <?php } ?>
+        <?php } ?>
 
-        <form action="category_add_action.php" method="POST" role="form" enctype="multipart/form-data">
+        <form action="authors_add_action.php" method="POST" role="form" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="">Name</label>
-                <input type="text" class="form-control" id="" placeholder="" name="title">
+                <input type="text" class="form-control" id="" placeholder="" name="name">
             </div>
             <div class="form-group">
-                <label for="">Description</label>
-                <input type="text" class="form-control" id="" placeholder="" name="description">
+                <label for="">Email</label>
+                <input type="text" class="form-control" id="" placeholder="" name="email">
             </div>
             <button type="submit" class="btn btn-primary">Create</button>
         </form>
     </div>
 </body>
+
 </html>

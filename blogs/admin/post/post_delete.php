@@ -3,7 +3,7 @@
 require_once('../../connection.php');
 $id = $_GET['id'];
 
-$query = "DELETE FROM authors WHERE id = ".$id;
+$query = "DELETE FROM posts WHERE id = ".$id;
 
 $status = $conn->query($query);
 var_dump($status);
@@ -16,5 +16,5 @@ else
 {
     setcookie('msg', 'Xóa không thành công', time() + 5);
 }
-header('Location: authors_list.php');
+header('Location: post.php');
 ?>
