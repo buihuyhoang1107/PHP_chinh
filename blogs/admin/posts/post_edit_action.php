@@ -1,5 +1,13 @@
 <?php
-
+ session_start();
+ // echo "<pre>";
+ // print_r($_SESSION);
+ // echo "</pre>";
+ 
+ //echo    $_SESSION['isLogin']; 
+ if(!isset($_SESSION['isLogin']) && $_SESSION['isLogin'] != true){
+     header("Location: login.php");
+ }
 require_once('../../connection.php');
 date_default_timezone_set('Asia/Ho_Chi_Minh');
 // upload file
