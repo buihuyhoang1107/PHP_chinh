@@ -1,18 +1,9 @@
 <?php
-session_start();
-// echo "<pre>";
-// print_r($_SESSION);
-// echo "</pre>";
-
-//echo    $_SESSION['isLogin']; 
-if(!isset($_SESSION['isLogin']) && $_SESSION['isLogin'] != true){
-    header("Location: login.php");
-}
-   
     require_once('../../connection.php');
-    $title = $_POST['title'];
-    $description = $_POST['description'];
-    $query = "INSERT INTO categories(title,description) VALUES ('".$title."', '".$description."');";
+    $email_customer = $_POST['newsletter'];
+    $promotion = 'Be the first to know about new products, offers and promos. Plus,
+    get 20% off!';
+    $query = "INSERT INTO notification_customer(email_customer,promotion) VALUES ('".$email_customer."', '".$promotion."');";
 
     $status = $conn->query($query);
     var_dump($status);

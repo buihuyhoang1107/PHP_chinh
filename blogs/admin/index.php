@@ -35,8 +35,8 @@
                         <h5>Xin chào <?=$_SESSION['author']['name'] ?></h5>
                         <ul>
                             <li><a href="">Quản lý người dùng</a></li>
-                            <li><a href="">Quản lý danh mục</a></li>
-                            <li><a href="">Quản lý bài viết</a></li>
+                            <li><a href="categories/category_list.php">Quản lý danh mục</a></li>
+                            <li><a href="posts/post.php">Quản lý bài viết</a></li>
                         </ul>
                     </article>
                 </div>

@@ -1,5 +1,14 @@
 <?php
+session_start();
+// echo "<pre>";
+// print_r($_SESSION);
+// echo "</pre>";
 
+//echo    $_SESSION['isLogin']; 
+if(!isset($_SESSION['isLogin']) && $_SESSION['isLogin'] != true){
+    header("Location: login.php");
+}
+   
 require_once('../../connection.php');
 //Load category -----------------------------------------------------------------------
 //Truy Vấn câu lệnh
@@ -13,6 +22,7 @@ $category = $conn->query($query_category)->fetch_assoc();
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,14 +36,16 @@ $category = $conn->query($query_category)->fetch_assoc();
     <!-- Latest compiled and minified JavaScript -->
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 </head>
-<body>
-   <div class="container">
-   <h3 style="text-align: center" >Zent - Education And Technology Group</h3>
-   <h3 style="text-align: center"  >Category Detail</h3>
-   <hr>
-   <h2>Title: <?=$category['title']?></h2>
-   <h2>Description: <?=$category['description']?></h2>
 
-   </div>
+<body>
+    <div class="container">
+        <h3 style="text-align: center">Zent - Education And Technology Group</h3>
+        <h3 style="text-align: center">Category Detail</h3>
+        <hr>
+        <h2>Title: <?=$category['title']?></h2>
+        <h2>Description: <?=$category['description']?></h2>
+
+    </div>
 </body>
+
 </html>
