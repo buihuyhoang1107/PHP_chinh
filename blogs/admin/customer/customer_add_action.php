@@ -7,17 +7,17 @@
              VALUES ('".$email_customer."', '".$promotion."');";
 
     $status = $conn->query($query);
-    var_dump($status);
+    // var_dump($status);
     
-    echo "<pre>";
-        print_r($email_customer);
+    // echo "<pre>";
+    //     print_r($email_customer);
        
-        print_r($promotion);
-    echo "</pre>";
+    //     print_r($promotion);
+    // echo "</pre>";
     if($status == true)
     {
-       setcookie('msg', 'Thêm mới thành công', time() + 5);
-        header('Location: ../../index.php');
+        // setcookie('msg', 'Thêm mới thành công', time() + 5);
+       header('Location: ../../index.php');
     }
     else
     {

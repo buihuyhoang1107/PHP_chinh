@@ -12,7 +12,7 @@
                     <ul class="footer-nav">
                         <li><b>Shipping & Returns</b></li>
                         <li><i>Everything you need to know about shipping, tracking and returns</i> </li>
-                        <li><a href="#">LEARN MORE</a></li>
+                        <li><a href="shipping.php">LEARN MORE</a></li>
                     </ul>
                     <div class="footer-copyright">
                         <span>&copy;
@@ -55,6 +55,7 @@
                             <input class="input" type="email" name="newsletter" placeholder="Enter your email">
                             <button class="newsletter-btn"><i class="fa fa-paper-plane"></i></button>
                         </form>
+
                     </div>
                     <ul class="footer-social">
                         <li><a href=" https://www.facebook.com/theskinfood.us"><i class="fa fa-facebook"></i></a></li>

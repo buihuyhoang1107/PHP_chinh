@@ -66,7 +66,7 @@
         <div class="section-row">
             <ul class="nav-aside-menu">
                 <li><a href="index.php">Home</a></li>
-                <li><a href="about.html">Need Help?</a></li>
+                <li><a href="needHelp.php">Need Help?</a></li>
             </ul>
         </div>
         <!-- /nav -->
