@@ -74,6 +74,7 @@
 <!-- /Footer -->
 
 <!-- jQuery Plugins -->
+<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/main.js"></script>
@@ -100,3 +101,71 @@ function filterFunction() {
     }
 }
 </script>
+
+<!-- Thêm Giỏ Hàng -->
+<!-- script -->
+<script>
+let carts = document.querySelectorAll('.add-cart');
+
+let products = [{
+        name: 'Grey Tshirt',
+        tag: 'greytshirt',
+        price: 35,
+        inCart: 0
+    },
+    {
+        name: 'AAAAAA',
+        tag: 'greytshirt',
+        price: 35,
+        inCart: 0
+    },
+    {
+        name: 'BBBBBBBBBBBBBBB',
+        tag: 'greytshirt',
+        price: 35,
+        inCart: 0
+    },
+    {
+        name: 'CCCCCCCCCCCCCC',
+        tag: 'greytshirt',
+        price: 35,
+        inCart: 0
+    },
+];
+
+for (let i = 0; i < carts.length; i++) {
+    carts[i].addEventListener('click', () => {
+        cartNumbers();
+    })
+}
+
+function onLoadCartNumber() {
+    let productNumbers = localStorage.getItem('cartNumbers');
+    if (productNumbers) {
+        document.querySelector('.cart span').textContent = productNumbers;
+    }
+}
+
+function cartNumbers() {
+
+
+    let productNumbers = localStorage.getItem('cartNumbers');
+
+    productNumbers = parseInt(productNumbers);
+
+    if (productNumbers) {
+        localStorage.setItem('cartNumbers', productNumbers + 1);
+        document.querySelector('.cart span').textContent = productNumbers + 1;
+
+
+    } else {
+        localStorage.setItem('cartNumbers', 1);
+        document.querySelector('.cart span').textContent = 1;
+
+    }
+
+
+}
+onLoadCartNumber();
+</script>
+<!-- /script -->

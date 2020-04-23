@@ -31,11 +31,13 @@
 				foreach ($posts_two_posts as $posts_two_post) {
 					//print_r($posts_two_post);
 				?>
-                <!-- post -->
+                <!-----------------------------------------------------------------------------------------2 post -->
                 <div class="col-md-6">
                     <div class="post post-thumb">
+
                         <a class="post-img" href="blog-post.php?id=<?php echo $posts_two_post['id']; ?>"><img
                                 src="./img/<?php echo $posts_two_post['thumbnail']; ?>" alt=""></a>
+
                         <div class="post-body">
                             <div class="post-meta">
 
@@ -47,10 +49,15 @@
                             <h3 class="post-title"><a
                                     href="blog-post.php?id=<?php echo $posts_two_post['id']; ?>"><?php echo $posts_two_post['title']; ?></a>
                             </h3>
+                            <h3>
+                                $<?php echo $posts_two_post['price']; ?>
+                            </h3>
+                            <a class="add-cart" href="#">Add cart</a>
+
                         </div>
                     </div>
                 </div>
-                <!-- /post -->
+                <!----------------------------------------------------------------------------------------- /2 post -->
                 <?php } ?>
             </div>
             <!-- /row -->
@@ -71,16 +78,22 @@
                 <!-- post -->
                 <div class="col-md-4">
                     <div class="post">
+
                         <a class="post-img " href="blog-post.php?id=<?php echo $post['id']; ?>"><img
                                 src="./img/<?php echo $post['thumbnail']; ?>" alt="" width="500" height="330"></a>
+
+                        <h4 class=" post-title">
+                            $<?php echo $post['price']; ?>
+                        </h4>
                         <div class="post-body">
                             <div class="post-meta">
                                 <a class="post-category cat-1"
                                     href="category.php?id=<?php echo $categorie['id']; ?>&cate=<?php echo $categorie['title'] ?> "><?php echo $post['category']; ?></a>
                                 <span class="post-date"><?php echo $post['created_at']; ?></span>
                             </div>
-                            <h3 class="post-title"><a href="blog-post.php?id=<?php echo $post['id']; ?>">
-                                    <?php echo $post['title']; ?> </a></h3>
+                            <h2 class="post-title"><a href="blog-post.php?id=<?php echo $post['id']; ?>">
+                                    <?php echo $post['title']; ?> </a></h2>
+
                         </div>
                     </div>
                 </div>
@@ -116,6 +129,9 @@
                                     <h3 class="post-title"><a
                                             href="blog-post.php?id=<?php echo $post_x['id']; ?>"><?php echo $post_x['title']; ?></a>
                                     </h3>
+                                    <h3 class="post-title">
+                                        $<?php echo $posts_two_post['price']; ?>
+                                    </h3>
                                 </div>
                             </div>
                         </div>
@@ -134,6 +150,9 @@
                                 <a class="post-img" href="blog-post.php?id=<?php echo $post_post['id']; ?>"><img
                                         src="./img/<?php echo $post_post['thumbnail']; ?>" alt="" width="500"
                                         height="350"></a>
+                                <h3 class="post-title">
+                                    $<?php echo $post_post['price']; ?>
+                                </h3>
                                 <div class="post-body">
                                     <div class="post-meta">
                                         <a class="post-category cat-2"
@@ -143,6 +162,7 @@
                                     <h3 class="post-title"><a
                                             href="blog-post.php?id=<?php echo $post_post['id']; ?>"><?php echo $post_post['title']; ?></a>
                                     </h3>
+
                                 </div>
                             </div>
                         </div>
@@ -192,6 +212,9 @@
                     <div class="post">
                         <a class="post-img" href="blog-post.php?id=<?php echo $Featured['id']; ?>"><img
                                 src="./img/<?php echo $Featured['thumbnail']; ?>" alt="" width="500" height="350"></a>
+                        <h3 class="post-title">
+                            $<?php echo $Featured['price']; ?>
+                        </h3>
                         <div class="post-body">
                             <div class="post-meta">
                                 <a class="post-category cat-2"
@@ -249,6 +272,9 @@
                                             href="blog-post.php?id=<?php echo $MostRead['id']; ?>"><?php echo $MostRead['title']; ?></a>
                                     </h3>
                                     <p><?php echo $MostRead['contents']; ?></p>
+                                    <h3 class="post-title">
+                                        $<?php echo $MostRead['price']; ?>
+                                    </h3>
                                 </div>
                             </div>
                         </div>
@@ -276,7 +302,11 @@
         <!-- /container -->
     </div>
     <!-- /section -->
+
+
 </body>
+
+<!-- -----------------------------------------------footer -->
 <?php
             include($level . Footer_part . "footer.php");
         ?>

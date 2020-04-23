@@ -18,6 +18,9 @@
             <h3 class="post-title"><a
                     href="blog-post.php?id=<?php echo $post_Featured['id']; ?>"><?php echo $post_Featured['title']; ?></a>
             </h3>
+            <h3 class="post-title">
+                $<?php echo $post_Featured['price']; ?>
+            </h3>
         </div>
     </div>
     <?php } ?>

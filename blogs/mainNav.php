@@ -34,8 +34,16 @@
             }
             </style>
             <div class="nav-btns">
+
+                <button>
+                    <div class="cart">
+                        <ion-icon size="small" name="cart-outline"></ion-icon>
+                        <span>0</span>
+                    </div>
+                </button>
                 <button class="aside-btn"><i class="fa fa-bars"></i></button>
                 <button class="search-btn"><i class="fa fa-search"></i></button>
+
                 <div class="search-form" id="myDropdown">
                     <input class="search-input" type="text" name="search" placeholder="Enter Your Search ..."
                         id="myInput" onkeyup="filterFunction()">

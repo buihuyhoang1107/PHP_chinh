@@ -15,6 +15,10 @@
                  <a
                      href="blog-post.php?id=<?php echo $post_MostRead['id']; ?>"><?php echo $post_MostRead['title']; ?></a>
              </h3>
+             <br>
+             <h3 class="post-title">
+                 $<?php echo $post_MostRead['price']; ?>
+             </h3>
          </div>
      </div>
      <?php } ?>

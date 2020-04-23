@@ -63,6 +63,9 @@
                                     <h3 class="post-title"><a
                                             href="blog-post.php?id=<?php echo $post_in_3post['id']; ?>"><?php echo $post_in_3post['title']; ?></a>
                                     </h3>
+                                    <h3 class="post-title">
+                                        $<?php echo $post_in_3post['price']; ?>
+                                    </h3>
                                 </div>
                             </div>
                         </div>
@@ -74,6 +77,9 @@
                             <div class="post">
                                 <a class="post-img" href="blog-post.php?id=<?php echo $post_post['id']; ?>"><img
                                         src="./img/<?php echo $post_post['thumbnail']; ?>" alt=""></a>
+                                <h3 class="post-title">
+                                    $<?php echo $post_post['price']; ?>
+                                </h3>
                                 <div class="post-body">
                                     <div class="post-meta">
                                         <a class="post-category cat-2"
@@ -116,6 +122,9 @@
                                             href="blog-post.php?id=<?php echo $post_p5['id']; ?>"><?php echo $post_p5['title']; ?></a>
                                     </h3>
                                     <p><?php echo $post_p5['description']; ?></p>
+                                    <h3 class="post-title">
+                                        $<?php echo $post_p5['price']; ?>
+                                    </h3>
                                 </div>
                             </div>
                         </div>
