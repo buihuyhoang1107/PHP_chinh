@@ -41,8 +41,10 @@
                         <span>0</span>
                     </div>
                 </button>
-                <button class="aside-btn"><i class="fa fa-bars"></i></button>
-                <button class="search-btn"><i class="fa fa-search"></i></button>
+                <button style="padding:15px" class="aside-btn"><i class="fa fa-bars"></i></button>
+                <button style="padding:15px" class="search-btn"><i class="fa fa-search"></i></button>
+                <button style="padding:15px"><a href="admin/customer/login_customer.php">Log in</a></button>
+
 
                 <div class="search-form" id="myDropdown">
                     <input class="search-input" type="text" name="search" placeholder="Enter Your Search ..."
