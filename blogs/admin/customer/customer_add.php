@@ -17,44 +17,57 @@
 
 <body>
     <div class="container">
-        <h3 align="center">Zent - Education And Technology Group</h3>
-        <h3 align="center">Registration</h3>
-        <hr>
-        <?php
+        <br><br>
+        <aside class="col-sm-3"></aside>
+
+        <aside class="col-sm-6">
+            <?php
         if(isset($_COOKIE['msg'])) { 
         ?>
-        <div class="alert alert-warning">
-            <strong>Thất bại!</strong> Tạo tài khoản không thành công !!!
-        </div>
-        <?php } ?>
-        <!-- customer_addInfomation_action.php -->
-        <form action="customer_addInfomation_action.php" onsubmit="return Validate()" method="POST" role="form"
-            enctype="multipart/form-data" name="vform">
-            <div class="form-group">
-                <label for="">Name</label>
-                <input type="text" class="form-control" id="" placeholder="Full Name" name="name_customer">
-                <div id="name_error"></div>
+            <div class="alert alert-success">
+                <strong>Thành công!</strong> Tạo tài khoản thành công. Hãy đăng nhập để mua hàng!!!
             </div>
-            <div class="form-group">
-                <label for="">Email</label>
-                <input type="email" class="form-control" id="" placeholder="Email" name="email">
-                <div id="email_error"></div>
+            <?php } ?>
+            <div class="card">
+                <article class="card-body">
+                    <h4 class="card-title mb-4 mt-1">Registration Customer</h4>
+                    <hr>
+                    <form action="customer_addInfomation_action.php" onsubmit="return Validate()" method="POST"
+                        role="form" enctype="multipart/form-data" name="vform">
+                        <div class="form-group">
+                            <label for="">Name</label>
+                            <input type="text" class="form-control" id="" placeholder="Full Name" name="name_customer">
+                            <div id="name_error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Email</label>
+                            <input type="email" class="form-control" id="" placeholder="Email" name="email">
+                            <div id="email_error"></div>
 
-            </div>
-            <div class="form-group">
-                <label for="">Password</label>
-                <input type="password" class="form-control" id="" placeholder="Password" name="password">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Password</label>
+                            <input type="password" class="form-control" id="" placeholder="Password" name="password">
 
-            </div>
-            <div class="form-group">
-                <label for="">Password Confirmation</label>
-                <input type="password" class="form-control" id="" placeholder="Password Confirmation"
-                    name="password_confirmation">
-                <div id="password_error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Password Confirmation</label>
+                            <input type="password" class="form-control" id="" placeholder="Password Confirmation"
+                                name="password_confirmation">
+                            <div id="password_error"></div>
 
+                        </div>
+                        <button type="submit" class="btn btn-primary" name="register">Create</button>
+
+                    </form>
+                </article>
+                <div class="col-md-6 text-right">
+                    <a class="height" href="login_customer.php">Login</a>
+                </div>
             </div>
-            <button type="submit" class="btn btn-primary" name="register">Create</button>
-        </form>
+    </div>
+    </aside>
+
     </div>
     <script>
     // lấy toàn bộ dữ liệu người dùng

@@ -16,13 +16,14 @@
     {
         $_SESSION['isLogin'] = true;
         $_SESSION['author'] = $author;
+        setcookie('msg', 'Đăng ký thành công', time() + 5);
         
-    header("Location: login_customer.php");
+        header("Location: customer_add.php");
     }
     else
     {
-    setcookie('msg', 'Đăng nhập thất bại', time() + 3);
-    header("Location: login_customer.php");
-
+       // setcookie('msg', 'Đăng nhập thất bại', time() + 3);
+       setcookie('msg', 'Đăng ký thành công', time() + 5);
+        header("Location: customer_add.php");
     }
 ?>
