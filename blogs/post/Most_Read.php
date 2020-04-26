@@ -19,6 +19,7 @@
              <h3 class="post-title">
                  $<?php echo $post_MostRead['price']; ?>
              </h3>
+             <button class="add-cart">Add cart</button>
          </div>
      </div>
      <?php } ?>

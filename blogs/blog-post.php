@@ -33,6 +33,15 @@
                             <span class="post-date"><?=$post_blog['created_at']?></span>
                         </div>
                         <h1><?=$post_blog['title']?></h1>
+                        <br>
+
+                        <h3 class="post-title">
+                            $<?php echo $post_blog['price']; ?>
+                            <button class="add-cart">Add cart</button>
+                        </h3>
+
+
+
                     </div>
                 </div>
             </div>

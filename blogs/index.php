@@ -52,7 +52,7 @@
                             <h3>
                                 $<?php echo $posts_two_post['price']; ?>
                             </h3>
-                            <a class="add-cart" href="#">Add cart</a>
+                            <button class="add-cart">Add cart</button>
 
                         </div>
                     </div>
@@ -85,6 +85,8 @@
                         <h4 class=" post-title">
                             $<?php echo $post['price']; ?>
                         </h4>
+                        <button class="add-cart">Add cart</button>
+
                         <div class="post-body">
                             <div class="post-meta">
                                 <a class="post-category cat-1"
@@ -132,6 +134,9 @@
                                     <h3 class="post-title">
                                         $<?php echo $posts_two_post['price']; ?>
                                     </h3>
+                                    <button class="add-cart">Add cart</button>
+
+
                                 </div>
                             </div>
                         </div>
@@ -153,6 +158,9 @@
                                 <h3 class="post-title">
                                     $<?php echo $post_post['price']; ?>
                                 </h3>
+                                <button class="add-cart">Add cart</button>
+
+
                                 <div class="post-body">
                                     <div class="post-meta">
                                         <a class="post-category cat-2"
@@ -215,6 +223,9 @@
                         <h3 class="post-title">
                             $<?php echo $Featured['price']; ?>
                         </h3>
+                        <button class="add-cart">Add cart</button>
+
+
                         <div class="post-body">
                             <div class="post-meta">
                                 <a class="post-category cat-2"
@@ -275,6 +286,9 @@
                                     <h3 class="post-title">
                                         $<?php echo $MostRead['price']; ?>
                                     </h3>
+                                    <button class="add-cart">Add cart</button>
+
+
                                 </div>
                             </div>
                         </div>

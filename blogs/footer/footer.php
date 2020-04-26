@@ -107,31 +107,31 @@ function filterFunction() {
 <script>
 let carts = document.querySelectorAll('.add-cart');
 
-let products = [{
-        name: 'Grey Tshirt',
-        tag: 'greytshirt',
-        price: 35,
-        inCart: 0
-    },
-    {
-        name: 'AAAAAA',
-        tag: 'greytshirt',
-        price: 35,
-        inCart: 0
-    },
-    {
-        name: 'BBBBBBBBBBBBBBB',
-        tag: 'greytshirt',
-        price: 35,
-        inCart: 0
-    },
-    {
-        name: 'CCCCCCCCCCCCCC',
-        tag: 'greytshirt',
-        price: 35,
-        inCart: 0
-    },
-];
+// let products = [{
+//         name: 'Grey Tshirt',
+//         tag: 'greytshirt',
+//         price: 35,
+//         inCart: 0
+//     },
+//     {
+//         name: 'AAAAAA',
+//         tag: 'greytshirt',
+//         price: 35,
+//         inCart: 0
+//     },
+//     {
+//         name: 'BBBBBBBBBBBBBBB',
+//         tag: 'greytshirt',
+//         price: 35,
+//         inCart: 0
+//     },
+//     {
+//         name: 'CCCCCCCCCCCCCC',
+//         tag: 'greytshirt',
+//         price: 35,
+//         inCart: 0
+//     },
+// ];
 
 for (let i = 0; i < carts.length; i++) {
     carts[i].addEventListener('click', () => {

@@ -20,7 +20,7 @@ $customer = $conn->query($query)->fetch_assoc();
 
 if($customer !== NULL)
 {
-    $_SESSION['isLogin'] = true;
+    $_SESSION['isLogin_customer'] = true;
     $_SESSION['customer'] = $customer;
     header("Location: ../../index.php");
 }

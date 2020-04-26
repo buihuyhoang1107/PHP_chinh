@@ -66,6 +66,8 @@
                                     <h3 class="post-title">
                                         $<?php echo $post_in_3post['price']; ?>
                                     </h3>
+                                    <button class="add-cart">Add cart</button>
+
                                 </div>
                             </div>
                         </div>
@@ -80,6 +82,8 @@
                                 <h3 class="post-title">
                                     $<?php echo $post_post['price']; ?>
                                 </h3>
+                                <button class="add-cart">Add cart</button>
+
                                 <div class="post-body">
                                     <div class="post-meta">
                                         <a class="post-category cat-2"
@@ -125,6 +129,8 @@
                                     <h3 class="post-title">
                                         $<?php echo $post_p5['price']; ?>
                                     </h3>
+                                    <button class="add-cart">Add cart</button>
+
                                 </div>
                             </div>
                         </div>
