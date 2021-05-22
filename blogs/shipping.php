@@ -1,16 +1,16 @@
 <!-- Linh query ---------------------------------------------->
 
 <?php
-    $level = "";
-    include("config.php");
-    include($level . Querry_part . "query_index.php");
+$level = "";
+include("config.php");
+include($level . Querry_part . "query_index.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <?php
-        include($level . Header_part . "link_header.php");
+    include($level . Header_part . "link_header.php");
     ?>
 
 </head>
@@ -78,7 +78,8 @@
                         original packaging
                         <br>
                         2. Online credit on any opened product within 30 days of the date of purchase <br>
-                        3. Any defective or damaged products will be replaced or refunded</p>
+                        3. Any defective or damaged products will be replaced or refunded
+                    </p>
                     <p>We would be remiss if we did not highlight two things. First, customers are responsible for any
                         return
                         shipping charges. Second, online purchases cannot be returned and/or exchanged at offline
@@ -102,7 +103,7 @@
 
 <!-- -----Footer --------------------------------------->
 <?php
-            include($level . Footer_part . "footer.php");
-        ?>
+include($level . Footer_part . "footer.php");
+?>
 
 </html>

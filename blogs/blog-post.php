@@ -1,16 +1,16 @@
 <!-- Linh query ---------------------------------------------->
 <?php
-    $level = "";
-    include("config.php");
-        include($level . Querry_part . "query_blog_post.php");
-        include($level . Querry_part . "query_index.php");
+$level = "";
+include("config.php");
+include($level . Querry_part . "query_blog_post.php");
+include($level . Querry_part . "query_index.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <?php
-        include($level . Header_part . "link_header.php");
+    include($level . Header_part . "link_header.php");
     ?>
 </head>
 
@@ -29,10 +29,10 @@
                 <div class="row">
                     <div class="col-md-10">
                         <div class="post-meta">
-                            <a class="post-category cat-2" href="category.html"><?=$post_blog['cate_blog']?></a>
-                            <span class="post-date"><?=$post_blog['created_at']?></span>
+                            <a class="post-category cat-2" href="category.html"><?= $post_blog['cate_blog'] ?></a>
+                            <span class="post-date"><?= $post_blog['created_at'] ?></span>
                         </div>
-                        <h1><?=$post_blog['title']?></h1>
+                        <h1><?= $post_blog['title'] ?></h1>
                         <br>
 
                         <h3 class="post-title">
@@ -60,20 +60,17 @@
                 <div class="col-md-8">
                     <div class="section-row sticky-container">
                         <div class="main-post">
-                            <h3><?=$post_blog['title']?></h3>
+                            <h3><?= $post_blog['title'] ?></h3>
                             <img class="img-responsive" src="./img/<?php echo $post_blog['thumbnail']; ?>" alt="">
 
-                            <p><?=$post_blog['description']?></p>
-                            <p><?=$post_blog['contents']?></p>
-                            <p><b><i>Đăng bởi: <?=$post_blog['NAME']?></i></b></p>
+                            <p><?= $post_blog['description'] ?></p>
+                            <p><?= $post_blog['contents'] ?></p>
+                            <p><b><i>Đăng bởi: <?= $post_blog['NAME'] ?></i></b></p>
                         </div>
                         <div class=" post-shares sticky-shares">
-                            <a href=" https://www.facebook.com/theskinfood.us" class="share-facebook"><i
-                                    class="fa fa-facebook"></i></a>
-                            <a href="https://twitter.com/skinfood_us" class="share-twitter"><i
-                                    class="fa fa-twitter"></i></a>
-                            <a href="https://www.instagram.com/skinfood_us/" class="share-pinterest"><i
-                                    class="fa fa-instagram"></i></a>
+                            <a href=" https://www.facebook.com/theskinfood.us" class="share-facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="https://twitter.com/skinfood_us" class="share-twitter"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/skinfood_us/" class="share-pinterest"><i class="fa fa-instagram"></i></a>
                         </div>
                     </div>
 
@@ -217,12 +214,12 @@
                     include($level . Post_part . "Most_Read.php");
                     // <!-- Featured Posts------------------------------------------------------ -->
                     include($level . Post_part . "post_Featured_Posts.php");
-                   ?>
+                    ?>
 
                     <!-- catagories -->
                     <div class="aside-widget">
                         <?php
-                            include($level . Post_part . "post_categories.php");
+                        include($level . Post_part . "post_categories.php");
                         ?>
                     </div>
                     <!-- /catagories -->
@@ -236,8 +233,8 @@
     <!-- /section -->
 
     <?php
-            include($level . Footer_part . "footer.php");
-        ?>
+    include($level . Footer_part . "footer.php");
+    ?>
 
 </body>
 

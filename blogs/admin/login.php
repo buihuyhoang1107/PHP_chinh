@@ -27,12 +27,11 @@
                                 <input name="password" class="form-control" placeholder="*****" type="password">
                             </div>
                             <?php
-                                if(isset($_COOKIE['msg']))
-                                {
-                             ?>
-                            <div class="alert alert-warning">
-                                <strong>Thông báo</strong> Đăng nhập thất bại !!!
-                            </div>
+                            if (isset($_COOKIE['msg'])) {
+                            ?>
+                                <div class="alert alert-warning">
+                                    <strong>Thông báo</strong> Đăng nhập thất bại !!!
+                                </div>
                             <?php } ?>
 
                             <div class="row">

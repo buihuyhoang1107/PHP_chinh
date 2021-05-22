@@ -1,13 +1,13 @@
 <?php
-    session_start();
-    // echo "<pre>";
-    // print_r($_SESSION);
-    // echo "</pre>";
-    
-    //echo    $_SESSION['isLogin']; 
-    if(!isset($_SESSION['isLogin']) && $_SESSION['isLogin'] != true){
-        header("Location: login.php");
-    }
+session_start();
+// echo "<pre>";
+// print_r($_SESSION);
+// echo "</pre>";
+
+//echo    $_SESSION['isLogin']; 
+if (!isset($_SESSION['isLogin']) && $_SESSION['isLogin'] != true) {
+    header("Location: login.php");
+}
 
 ?>
 <!DOCTYPE html>
@@ -32,7 +32,7 @@
                         <h4 class="card-title mb-4 mt-1">Admin Site</h4>
 
                         <hr>
-                        <h5>Xin chào <?=$_SESSION['author']['name'] ?></h5>
+                        <h5>Xin chào <?= $_SESSION['author']['name'] ?></h5>
                         <ul>
                             <li><a href="authors/authors_list.php">Quản lý người dùng</a></li>
                             <li><a href="categories/category_list.php">Quản lý danh mục</a></li>

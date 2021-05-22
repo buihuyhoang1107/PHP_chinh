@@ -1,16 +1,16 @@
 <!-- Linh query ---------------------------------------------->
 
 <?php
-    $level = "";
-    include("config.php");
-    include($level . Querry_part . "query_index.php");
+$level = "";
+include("config.php");
+include($level . Querry_part . "query_index.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <?php
-        include($level . Header_part . "link_header.php");
+    include($level . Header_part . "link_header.php");
     ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,20 +22,20 @@
 
 <body>
     <style>
-    body {
-        font-family: "Montserrat", sans-serif
-    }
+        body {
+            font-family: "Montserrat", sans-serif
+        }
 
-    .w3-bar,
-    h1,
-    button {
-        font-family: "Montserrat", sans-serif
-    }
+        .w3-bar,
+        h1,
+        button {
+            font-family: "Montserrat", sans-serif
+        }
 
-    .fa-anchor,
-    .fa-coffee {
-        font-size: 200px
-    }
+        .fa-anchor,
+        .fa-coffee {
+            font-size: 200px
+        }
     </style>
     <!-- Header -->
     <header id="header">
@@ -86,7 +86,7 @@
 
 <!-- -----Footer --------------------------------------->
 <?php
-            include($level . Footer_part . "footer.php");
-        ?>
+include($level . Footer_part . "footer.php");
+?>
 
 </html>

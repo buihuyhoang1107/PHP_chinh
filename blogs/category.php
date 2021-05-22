@@ -1,8 +1,8 @@
 <!-- Link query ---------------------------------------------->
 <?php
-    $level = "";
-    include("config.php");
-        include($level . Querry_part . "query_category.php");
+$level = "";
+include("config.php");
+include($level . Querry_part . "query_category.php");
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +10,7 @@
 
 <head>
     <?php
-        include($level . Header_part . "link_header.php");
+    include($level . Header_part . "link_header.php");
     ?>
 </head>
 
@@ -52,16 +52,13 @@
                         <!-- post -->
                         <div class="col-md-12">
                             <div class="post post-thumb">
-                                <a class="post-img" href="blog-post.php?id=<?php echo $post_in_3post['id']; ?>"><img
-                                        src="./img/<?php echo $post_in_3post['thumbnail']; ?>" alt=""></a>
+                                <a class="post-img" href="blog-post.php?id=<?php echo $post_in_3post['id']; ?>"><img src="./img/<?php echo $post_in_3post['thumbnail']; ?>" alt=""></a>
                                 <div class="post-body">
                                     <div class="post-meta">
-                                        <a class="post-category cat-2"
-                                            href="#"><?php echo $post_in_3post['category']; ?></a>
+                                        <a class="post-category cat-2" href="#"><?php echo $post_in_3post['category']; ?></a>
                                         <span class="post-date"><?php echo $post_in_3post['created_at']; ?></span>
                                     </div>
-                                    <h3 class="post-title"><a
-                                            href="blog-post.php?id=<?php echo $post_in_3post['id']; ?>"><?php echo $post_in_3post['title']; ?></a>
+                                    <h3 class="post-title"><a href="blog-post.php?id=<?php echo $post_in_3post['id']; ?>"><?php echo $post_in_3post['title']; ?></a>
                                     </h3>
                                     <h3 class="post-title">
                                         $<?php echo $post_in_3post['price']; ?>
@@ -74,29 +71,26 @@
                         <!-- /post -->
 
                         <?php foreach ($posts_post as $post_post) { ?>
-                        <!-- post -->
-                        <div class="col-md-6">
-                            <div class="post">
-                                <a class="post-img" href="blog-post.php?id=<?php echo $post_post['id']; ?>"><img
-                                        src="./img/<?php echo $post_post['thumbnail']; ?>" alt=""></a>
-                                <h3 class="post-title">
-                                    $<?php echo $post_post['price']; ?>
-                                </h3>
-                                <button class="add-cart">Add cart</button>
-
-                                <div class="post-body">
-                                    <div class="post-meta">
-                                        <a class="post-category cat-2"
-                                            href="#"><?php echo $post_post['category']; ?></a>
-                                        <span class="post-date"><?php echo $post_post['created_at']; ?></span>
-                                    </div>
-                                    <h3 class="post-title"><a
-                                            href="blog-post.php?id=<?php echo $post_post['id']; ?>"><?php echo $post_post['title']; ?></a>
+                            <!-- post -->
+                            <div class="col-md-6">
+                                <div class="post">
+                                    <a class="post-img" href="blog-post.php?id=<?php echo $post_post['id']; ?>"><img src="./img/<?php echo $post_post['thumbnail']; ?>" alt=""></a>
+                                    <h3 class="post-title">
+                                        $<?php echo $post_post['price']; ?>
                                     </h3>
+                                    <button class="add-cart">Add cart</button>
+
+                                    <div class="post-body">
+                                        <div class="post-meta">
+                                            <a class="post-category cat-2" href="#"><?php echo $post_post['category']; ?></a>
+                                            <span class="post-date"><?php echo $post_post['created_at']; ?></span>
+                                        </div>
+                                        <h3 class="post-title"><a href="blog-post.php?id=<?php echo $post_post['id']; ?>"><?php echo $post_post['title']; ?></a>
+                                        </h3>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- /post -->
+                            <!-- /post -->
                         <?php } ?>
 
 
@@ -111,30 +105,28 @@
                             </div>
                         </div>
                         <!-- ad -->
-                        <?php foreach($posts_post5 as $post_p5) { ?>
-                        <!-- post -->
-                        <div class="col-md-12">
-                            <div class="post post-row">
-                                <a class="post-img" href="blog-post.php?id=<?php echo $post_p5['id']; ?>"><img
-                                        src="./img/<?php echo $post_p5['thumbnail']; ?>" alt=""></a>
-                                <div class="post-body">
-                                    <div class="post-meta">
-                                        <a class="post-category cat-2" href="#"><?php echo $post_p5['category']; ?></a>
-                                        <span class="post-date"><?php echo $post_p5['created_at']; ?></span>
-                                    </div>
-                                    <h3 class="post-title"><a
-                                            href="blog-post.php?id=<?php echo $post_p5['id']; ?>"><?php echo $post_p5['title']; ?></a>
-                                    </h3>
-                                    <p><?php echo $post_p5['description']; ?></p>
-                                    <h3 class="post-title">
-                                        $<?php echo $post_p5['price']; ?>
-                                    </h3>
-                                    <button class="add-cart">Add cart</button>
+                        <?php foreach ($posts_post5 as $post_p5) { ?>
+                            <!-- post -->
+                            <div class="col-md-12">
+                                <div class="post post-row">
+                                    <a class="post-img" href="blog-post.php?id=<?php echo $post_p5['id']; ?>"><img src="./img/<?php echo $post_p5['thumbnail']; ?>" alt=""></a>
+                                    <div class="post-body">
+                                        <div class="post-meta">
+                                            <a class="post-category cat-2" href="#"><?php echo $post_p5['category']; ?></a>
+                                            <span class="post-date"><?php echo $post_p5['created_at']; ?></span>
+                                        </div>
+                                        <h3 class="post-title"><a href="blog-post.php?id=<?php echo $post_p5['id']; ?>"><?php echo $post_p5['title']; ?></a>
+                                        </h3>
+                                        <p><?php echo $post_p5['description']; ?></p>
+                                        <h3 class="post-title">
+                                            $<?php echo $post_p5['price']; ?>
+                                        </h3>
+                                        <button class="add-cart">Add cart</button>
 
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- /post -->
+                            <!-- /post -->
                         <?php } ?>
                     </div>
                 </div>
@@ -146,13 +138,13 @@
                     <?php
 
                     include($level . Post_part . "Most_Read.php");
-                   ?>
+                    ?>
                     <!-- /post widget -->
 
                     <!-- catagories -->
                     <div class="aside-widget">
                         <?php
-                            include($level . Post_part . "post_categories.php");
+                        include($level . Post_part . "post_categories.php");
                         ?>
                     </div>
                     <!-- /catagories -->
@@ -165,8 +157,8 @@
     <!-- /section -->
 
     <?php
-            include($level . Footer_part . "footer.php");
-        ?>
+    include($level . Footer_part . "footer.php");
+    ?>
 
 </body>
 

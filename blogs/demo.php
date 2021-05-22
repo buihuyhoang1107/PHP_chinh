@@ -26,4 +26,3 @@
 			print_r($cate);
 		echo"</pre>";		
 	}
-?>

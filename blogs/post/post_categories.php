@@ -10,23 +10,21 @@
             <br>
 
             <?php
-                        $i = 1;
-                        $j = 100;
-                        
-                                    foreach ($categories as $categorie) {
-                                    ?>
+            $i = 1;
+            $j = 100;
 
-            <li><a href="category.php?id=<?php echo $categorie['id']; ?>&cate=<?php echo $categorie['title'] ?>"
-                    class="cat-<?= $i ?>"><?php echo $categorie['title']; ?><span><?= $j ?></span></a>
-            </li>
+            foreach ($categories as $categorie) {
+            ?>
+
+                <li><a href="category.php?id=<?php echo $categorie['id']; ?>&cate=<?php echo $categorie['title'] ?>" class="cat-<?= $i ?>"><?php echo $categorie['title']; ?><span><?= $j ?></span></a>
+                </li>
             <?php
-                            $i++;
-                            $j += 2;
-							if ($i == 6){
-								$i = 1;
-                                
-                            }
-						} ?>
+                $i++;
+                $j += 2;
+                if ($i == 6) {
+                    $i = 1;
+                }
+            } ?>
         </ul>
     </div>
 </div>
