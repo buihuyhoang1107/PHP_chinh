@@ -30,7 +30,7 @@ while ($row = $result_posts->fetch_assoc()) {
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Zent - Education And Technology Group</title>
+    <title>Education And Technology</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
@@ -43,7 +43,7 @@ while ($row = $result_posts->fetch_assoc()) {
 
 <body>
     <div class="container">
-        <h3 align="center">Zent - Education And Technology Group</h3>
+        <h3 align="center">Education And Technology</h3>
         <h3 align="center">Posts List</h3>
         <a href="post_add.php" type="button" class="btn btn-primary">Thêm mới</a>
 
